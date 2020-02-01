@@ -8,7 +8,6 @@ export default class Resty extends Component {
       url: '',
       method: '',
       response: '',
-
     }
 
     handleChange = (event) => {
@@ -20,7 +19,9 @@ export default class Resty extends Component {
         
       return (
         <>
-          <Form handleChange={this.handleChange} />
+          <Form 
+            handleChange={this.handleChange} 
+            url={this.state.url}/>
         </>
       );
     }

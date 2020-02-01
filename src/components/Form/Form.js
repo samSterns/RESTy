@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Form = ({ handleChange }) => {
+const Form = ({ handleChange, url }) => {
   return (
     <form>
       <label>
+        <input type="text" id="url-text-area" name="url" placeholder="URL" value={url} onChange={handleChange}></input>
         <input type="radio" name="method" value="GET" onChange={handleChange}></input>
         <span>GET</span>
       </label>
@@ -24,6 +25,10 @@ const Form = ({ handleChange }) => {
       <label>
         <input type="radio" name="method" value="DELETE" onChange={handleChange}></input>
         <span>DELETE</span>
+        <label>
+          <button type="submit" onChange={handleChange}>Go!</button>
+        </label>
+        <textarea placeholder="Raw JSON Body" name="requestBody" onChange={handleChange}></textarea>
       </label>
     </form>
   );
