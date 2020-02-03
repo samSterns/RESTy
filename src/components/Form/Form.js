@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 const Form = ({ handleChange, url }) => {
   return (
     <form>
+      <aside> 
+        <h2>History</h2>
+        <ul id="history"></ul>
+      </aside>
       <label>
         <input type="text" id="url-text-area" name="url" placeholder="URL" value={url} onChange={handleChange}></input>
         <input type="radio" name="method" value="GET" onChange={handleChange}></input>
@@ -35,7 +39,8 @@ const Form = ({ handleChange, url }) => {
 };
 
 Form.propTypes = {
-  handleChange: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired,
+  url: PropTypes.string.isRequired
 };
 
 export default Form; 

@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Response.css';
 
-const Response = ({ jsonHeader, jsonResponse }) => (
-  <section>
-    <p>{jsonHeader}</p>
-    <p>{jsonResponse}</p>
-  </section>
+const Response = ({ response }) => (
+  <div className={styles}>
+    <textarea>{response}</textarea>
+  </div>
 );
 
-Response.PropTypes = {
-  jsonResponse: PropTypes.string.isRequired,
-  jsonHeader: PropTypes.string.isRequired
+Response.propTypes = {
+  response: PropTypes.string.isRequired
 };
+
 
 export default Response; 
