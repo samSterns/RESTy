@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Response.css';
 
-const Response = ({ response }) => (
+const ResponseItem = ({ response }) => (
   <div className={styles}>
     <textarea>{response}</textarea>
   </div>
@@ -13,4 +13,4 @@ Response.propTypes = {
 };
 
 
-export default Response; 
+export default ResponseItem; 

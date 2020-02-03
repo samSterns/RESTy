@@ -1,0 +1,14 @@
+input {
+      display: none;
+      border: 1px solid black; 
+      padding: 5px;
+}
+  
+input:checked {
+     background-color: #0056bf;
+     color: #eae7e1;
+}
+
+.radio-button {
+ border: 1px solid black;
+}

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { apiCall } from '../services/apiCall.js';
 import Form from '../Form/Form';
-import Response from '../Response/Response.js';
+import ResponseItem from '../Response/Response.js';
 
 export default class Resty extends Component {
 
     state = {
       url: '',
+      jsoninput: '',
       method: '',
-      Response: '',
+      response: '',
+      history: []
     }
 
     handleChange = (event) => {
@@ -40,8 +42,8 @@ export default class Resty extends Component {
             handleChange={this.handleChange} 
             onSubmit={this.onSubmit}
             url={this.state.url}/>
-          <Response
-            response={this.state.Response}
+          <ResponseItem
+            response={this.state.ResponseItem}
           />
         </>
       );
