@@ -1,14 +1,43 @@
-input {
-      display: none;
-      border: 1px solid black; 
-      padding: 5px;
+.Form {
+     border: 1px solid;
+     margin: 10px;
+     padding: 10px;
+     background: #ffffff4a;
+     border-radius: 25px;
+     font-family: 'Oswald', sans-serif;
+
 }
-  
-input:checked {
+
+
+.radio-button {
+     width: 20px;
+     border-radius: 10px;
+     font-size: .75rem;
+     background: #ffffffa8;
+     font-family: 'Oswald', sans-serif;
+     display: inline-block;
+     padding: 10px;
+     border: 1px solid black; 
+     border-radius: 5px;
+     cursor: pointer;
+     width: 60px;
+     height: 50px;
+
+     input {
+          display: none;
+     }
+
+}
+
+
+button {
+     border-radius: 5px;
+     margin-right: 10px;
+     cursor: pointer;
+}
+button:active {
      background-color: #0056bf;
      color: #eae7e1;
 }
 
-.radio-button {
- border: 1px solid black;
-}
+  

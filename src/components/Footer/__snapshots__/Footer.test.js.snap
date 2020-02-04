@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders Footer 1`] = `
+<div
+  id="footer"
+>
+  <footer
+    className={null}
+  >
+    <h1>
+      2020 Copyright
+    </h1>
+  </footer>
+</div>
+`;
