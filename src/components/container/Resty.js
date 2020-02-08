@@ -8,7 +8,7 @@ export default class Resty extends Component {
     state = {
       url: '',
       jsoninput: '',
-      method: 'GET',
+      method: '',
       responseItem: {},
       previousHistory: []
     }
@@ -22,31 +22,37 @@ export default class Resty extends Component {
       this.setState({ [event.target.name]: event.target.value });
     }
 
-    onSubmit = event => {
+    handleSubmit = event => {
       event.preventDefault();
-  
       
-      this.setState(() => ({ previousHistory: [...previousHistory, {
-        method: this.state.method,
-        url: this.state.url,
-        jsoninput: this.state.url
-      }] 
-      }));
-      this.fetch();
+      fetch(this.state.url, {
+        methods: this.state.method,
+        headers:  {
+          'Content-Type': 'application/json'
+        },
+        body: this.state.requestBody
+      })
+        .then(res => {
+          return res.json();
+        })
+        .then(response => {
+          this.setState({ responseItem:response });
+        }
+        )
     };
 
 
     render() {
-      const { previousHistory, url, method, reponseItem } = this.state;
+      const { previousHistory, url, method, responseItem } = this.state;
 
       return (
         <>
           <Form 
             handleChange={this.handleChange} 
-            onSubmit={this.onSubmit}
-            url={this.state.url}/>
+            handleSubmit={this.handleSubmit}
+            url={url}/>
           <ResponseItem
-            response={this.state.ResponseItem}
+            response={responseItem}
           />
         </>
       );
