@@ -44,15 +44,17 @@ export default class Resty extends Component {
 
 
     render() {
-      const { previousHistory, url, method, responseItem } = this.state;
+      const { previousHistory, url, method, jsoninput, responseItem } = this.state;
 
       return (
         <>
           <Form 
             handleChange={this.handleChange} 
             handleSubmit={this.handleSubmit}
-            url={url}/>
-          <History />  
+            url={url}
+            method={method}
+            jsoninput={jsoninput}/>
+          <History history={previousHistory}/>  
           <ResponseItem
             response={responseItem}
           />

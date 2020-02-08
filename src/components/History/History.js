@@ -5,7 +5,7 @@ const History = () => (
   <div id="history-section">
     <aside className={styles}>
       <h1>History</h1>
-      <textarea placeholder="response"></textarea>
+      <section placeholder="response" />
     </aside>
   </div>
 );
