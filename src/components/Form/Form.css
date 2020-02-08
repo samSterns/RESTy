@@ -5,10 +5,11 @@
      background: #ffffff4a;
      border-radius: 25px;
      font-family: 'Oswald', sans-serif;
-
+     width: 60vw;
+     float: right;
 }
 
-
+/* 
 .radio-button {
      width: 20px;
      border-radius: 10px;
@@ -27,7 +28,7 @@
           display: none;
      }
 
-}
+} */
 
 
 button {
@@ -39,5 +40,8 @@ button:active {
      background-color: #0056bf;
      color: #eae7e1;
 }
+
+
+
 
   

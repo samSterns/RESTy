@@ -5,10 +5,8 @@ import styles from './Form.css';
 const Form = ({ handleChange, url, method }) => {
   return (
     <form className={styles.Form}>
-      <aside> 
-        <h2>History</h2>
-        <ul id="history"></ul>
-      </aside>
+    
+      
       <label className={styles.active}>
         <input className="url-style" type="text" id="url-text-area" name="url" placeholder="URL" value={url} onChange={handleChange}></input>
         <input className="radio-button" type="radio" name="method" value="GET" checked={method === 'GET'} onChange={handleChange}></input>

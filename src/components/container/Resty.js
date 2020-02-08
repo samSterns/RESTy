@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { apiCall } from '../services/apiCall.js';
 import Form from '../Form/Form';
+import History from '../History/History.js';
 import ResponseItem from '../Response/Response.js';
 
 export default class Resty extends Component {
@@ -10,7 +11,7 @@ export default class Resty extends Component {
       jsoninput: '',
       method: '',
       responseItem: {},
-      previousHistory: []
+      previous: []
     }
 
     fetch = () => {
@@ -38,7 +39,7 @@ export default class Resty extends Component {
         .then(response => {
           this.setState({ responseItem:response });
         }
-        )
+        );
     };
 
 
@@ -51,6 +52,7 @@ export default class Resty extends Component {
             handleChange={this.handleChange} 
             handleSubmit={this.handleSubmit}
             url={url}/>
+          <History />  
           <ResponseItem
             response={responseItem}
           />
