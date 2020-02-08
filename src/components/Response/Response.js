@@ -4,12 +4,12 @@ import styles from './Response.css';
 
 const ResponseItem = ({ response }) => (
   <div className={styles}>
-    <textarea>{response}</textarea>
+    <textarea response={response} />
   </div>
 );
 
-Response.propTypes = {
-  response: PropTypes.string.isRequired
+ResponseItem.propTypes = {
+  response: PropTypes.object.isRequired
 };
 
 
