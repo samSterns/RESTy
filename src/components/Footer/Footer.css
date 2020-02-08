@@ -1,0 +1,13 @@
+Footer {
+    position: Absolute;
+    bottom:0;
+    color: rgb(226, 222, 215);
+    float: bottom;
+    width: 100vw;
+    padding: 1px 20px;
+
+    h1 {
+        background-color: #204060;
+        justify-content: center;
+    }
+}
